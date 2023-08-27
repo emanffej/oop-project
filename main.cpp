@@ -36,7 +36,7 @@ void shopping::menu(){
     cout<<"\t\t\t\t                      \n";
     cout<<"\t\t\t\t| 1. Administrator |\n ";
     cout<<"\t\t\t\t| 2. Buyer |        \n ";
-    cout<<"\t\t\t\t| 1. Exit |\n ";
+    cout<<"\t\t\t\t| 3. Exit |\n ";
     cout<<"\n\t\t\t Please select : ";
     cin>>choice;
 
@@ -48,7 +48,7 @@ void shopping::menu(){
             cout<<"\t\t Enter Password";
             cin>>password;
 
-            if(email="admin@email.com" && password="admin123"){
+            if(email=="admin@email.com" && password=="admin123"){
                 administrator();
             }
             else{
@@ -62,7 +62,7 @@ void shopping::menu(){
         case 3:
             exit(0);
             break;
-        case default:
+        default:
             cout<<"SELECT VALID OPTION";
             break;  
     }
@@ -92,7 +92,7 @@ void shopping::administrator(){
         edit();
         break;
     case 3:
-        rem();
+        remove();
         break;
     case 4:
         menu();
@@ -119,7 +119,7 @@ void shopping::buyer(){
             menu();
             break;
         default:
-            cout<<"INVALID CHOICE"
+            cout<<"INVALID CHOICE";
             }
         goto m;
 }
@@ -147,7 +147,7 @@ void shopping::add(){
     if(!data){
         data.open("database.txt",ios::app|ios::out);        //open the file in append mode if this file doesnt exist. ios out->write mode
         data<<" "<<pcode<<" "<<pname<<" "<<price<<" "<<dis<<" \n";
-        data.close;
+        data.close();
     }
     else{
         //if data file exists, we read from file
