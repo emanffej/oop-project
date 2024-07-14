@@ -1,1 +1,1 @@
-Simple c++ project for managing receipt in groceries store
+# Simple c++ project for managing receipt in a grocery store
